@@ -311,23 +311,15 @@ honeypot-ssh-cowrie-lab/
 
 ---
 
-## 📝 What Employers See
+## Skills Demonstrated
 
-This project shows:
-
-1. **You understand attacker methodology** — Not theoretical; you've documented real attack patterns
-2. **You can deploy production security infrastructure** — Cowrie + Splunk is real-world tooling
-3. **You speak the language of modern threats** — MITRE ATT&CK mapping, TTPs, threat actors
-4. **You can reduce dwell time** — Real-time alerting vs. industry average (197 days → seconds)
-5. **You bridge detection and response** — From log capture to dashboard to alert to action
-
----
-
-## 🎯 Interview Talking Points
-
-**What would you say in an interview?**
-
-*"I deployed a Cowrie SSH honeypot on Ubuntu Server to capture real attacker behavior. I configured deception layers — fake AWS credentials, database passwords, realistic hostnames — and integrated everything into Splunk with real-time alerting. The honeypot captured 65 events including 9 successful logins and complete attack sequences. I mapped the activity to 5 MITRE ATT&CK techniques and built dashboards showing attack patterns. The most valuable insight was realizing that attackers harvest credentials in a sub-second, fully automated sequence — exactly what the 2025 European logistics breach showed, where AWS keys were stolen undetected for 47 days. My Splunk alert would have caught that in seconds. This project taught me that visibility and deception matter more than blocking — because you can only defend what you understand."*
+- **Deception engineering** — Configured a Cowrie SSH honeypot with layered deception (fake AWS credentials, database passwords, realistic hostnames) to draw out and observe genuine attacker behavior rather than relying on signature-based detection alone.
+- **Log pipeline integration** — Forwarded honeypot activity into Splunk Enterprise and built real-time alerting, converting raw session logs into actionable, timestamped security events.
+- **Attack sequence analysis** — Captured and analyzed 65 events, including 9 successful logins and 7 post-login command sequences, reconstructing the full attacker workflow from initial access to post-compromise activity.
+- **MITRE ATT&CK mapping** — Mapped observed attacker behavior to 5 MITRE ATT&CK techniques (T1110, T1082, T1087, T1552, T1105), translating raw log data into a recognized threat-modeling framework.
+- **Detection-to-response thinking** — Identified that credential harvesting occurred in a sub-second, fully automated sequence — directly comparable to real-world incidents (e.g., the 2025 European logistics breach, where stolen AWS keys went undetected for 47 days) — and demonstrated how real-time Splunk alerting closes that detection gap from days to seconds.
+- **Infrastructure troubleshooting** — Resolved live environment issues including iptables NAT redirect configuration, Cowrie permission conflicts, and Splunk port/permission errors, reflecting practical, hands-on Linux and SOC tooling experience.
+```
 
 ---
 
